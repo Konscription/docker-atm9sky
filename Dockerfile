@@ -2,7 +2,9 @@
 
 FROM openjdk:17-buster
 
-LABEL version="1.0.3"
+ARG ATM9SKY_VERSION
+
+LABEL version=${ATM(SKY_VERSION:-1.0.3}
 
 RUN apt-get update && apt-get upgrade -y
 
